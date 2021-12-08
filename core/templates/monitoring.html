@@ -1,0 +1,62 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Icons {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <a href="#!" class="btn btn-warning">Add camera</a>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-fluid mt--7">
+    <div class="row">
+      <div class="col">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <h3 class="mb-0">Zone 1 - Camera 1</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-4">
+                Camera Info
+              </div>
+              <div class="col-lg-8 text-center">
+                <img style="border: 2px solid #6874e4; border-radius: 3px;" width="100%" height="100%" src="{% url 'detect_mask_video_feed' %}">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <h3 class="mb-0">Zone 2 - Camera 2</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-4">
+                Camera Info
+              </div>
+              <div class="col-lg-8 text-center">
+                <img style="border: 2px solid #6874e4; border-radius: 3px;" width="100%" height="100%" src="{% url 'video_feed' %}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "includes/footer.html" %}
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
